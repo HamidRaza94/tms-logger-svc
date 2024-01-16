@@ -1,0 +1,52 @@
+{
+  "name": "tms-logger-svc",
+  "version": "1.0.0",
+  "description": "Logger service for tenant management system",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "clean:build": "rimraf ./build",
+    "nodemon": "nodemon ./build",
+    "start": "npm run clean:build && tsc-watch --project . --onSuccess \"npm run nodemon\"",
+    "start:prod": "npm run clean:build && npm run build && node ./build/index.js"
+  },
+  "keywords": [],
+  "author": "Mohammad Hamid Raza",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cookie-parser": "1.4.6",
+    "@types/cors": "2.8.17",
+    "@types/express": "4.17.21",
+    "@types/lodash": "4.14.202",
+    "@types/module-alias": "2.0.4",
+    "@types/node": "20.11.0",
+    "@types/uuid": "9.0.7",
+    "@typescript-eslint/eslint-plugin": "6.18.1",
+    "@typescript-eslint/parser": "6.18.1",
+    "eslint": "8.56.0",
+    "eslint-config-prettier": "9.1.0",
+    "nodemon": "3.0.2",
+    "prettier": "3.1.1",
+    "tsc-watch": "6.0.4",
+    "typescript": "5.3.3"
+  },
+  "dependencies": {
+    "body-parser": "1.20.2",
+    "cookie-parser": "1.4.6",
+    "cors": "2.8.5",
+    "dotenv": "16.3.1",
+    "express": "4.18.2",
+    "express-validator": "7.0.1",
+    "helmet": "7.1.0",
+    "lodash": "4.17.21",
+    "module-alias": "2.2.3",
+    "mongoose": "8.0.4",
+    "rimraf": "5.0.5",
+    "system-response-lib": "1.0.0",
+    "uuid": "9.0.1",
+    "winston": "3.11.0"
+  },
+  "_moduleAliases": {
+    "@": "build/"
+  }
+}
